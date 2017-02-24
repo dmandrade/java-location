@@ -13,9 +13,8 @@
 
 package br.com.nomadlog.Location;
 
-import br.brastan.Location.Distance.DistanceInterface;
-import br.brastan.Location.Exception.NotConvergingException;
-import br.brastan.Utils.GeoUtils;
+import br.com.nomadlog.Location.Distance.DistanceInterface;
+import br.com.nomadlog.Location.Exception.NotConvergingException;
 
 import java.io.Serializable;
 

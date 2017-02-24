@@ -13,9 +13,9 @@
 
 package br.com.nomadlog.Location;
 
-import br.brastan.Location.Distance.DistanceInterface;
-import br.brastan.Location.Distance.Vicenty;
-import br.brastan.Utils.Utils;
+import br.com.nomadlog.Location.Distance.DistanceInterface;
+import br.com.nomadlog.Location.Distance.Vicenty;
+import br.com.nomadlog.Utils.Utils;
 import br.brastan.model.GeographicMarks_model;
 import br.brastan.model.dao.GeographicMarksDAO;
 import org.apache.logging.log4j.LogManager;

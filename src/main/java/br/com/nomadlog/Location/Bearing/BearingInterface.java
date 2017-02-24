@@ -13,7 +13,7 @@
 
 package br.com.nomadlog.Location.Bearing;
 
-import br.brastan.Location.CoordinateInterface;
+import br.com.nomadlog.Location.CoordinateInterface;
 
 /**
  * Created by danil on 27/10/2016.

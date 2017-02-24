@@ -13,9 +13,9 @@
 
 package br.com.nomadlog.Location.Bearing;
 
-import br.brastan.Location.Coordinate;
-import br.brastan.Location.CoordinateInterface;
-import br.brastan.Location.Exception.NotConvergingException;
+import br.com.nomadlog.Location.Coordinate;
+import br.com.nomadlog.Location.CoordinateInterface;
+import br.com.nomadlog.Location.Exception.NotConvergingException;
 
 public class BearingEllipsoidal implements BearingInterface {
 

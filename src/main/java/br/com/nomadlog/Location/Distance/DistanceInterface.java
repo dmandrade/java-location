@@ -13,8 +13,8 @@
 
 package br.com.nomadlog.Location.Distance;
 
-import br.brastan.Location.CoordinateInterface;
-import br.brastan.Location.Exception.NotConvergingException;
+import br.com.nomadlog.Location.CoordinateInterface;
+import br.com.nomadlog.Location.Exception.NotConvergingException;
 
 /**
  * Created by danil on 26/10/2016.

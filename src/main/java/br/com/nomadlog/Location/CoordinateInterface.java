@@ -13,7 +13,7 @@
 
 package br.com.nomadlog.Location;
 
-import br.brastan.Location.Distance.DistanceInterface;
+import br.com.nomadlog.Location.Distance.DistanceInterface;
 
 /**
  * Created by danil on 25/10/2016.

@@ -13,8 +13,8 @@
 
 package br.com.nomadlog.Location;
 
-import br.brastan.Location.EllipsoidSystem.EllipsoidInterface;
-import br.brastan.Location.EllipsoidSystem.Wgs84;
+import br.com.nomadlog.Location.EllipsoidSystem.EllipsoidInterface;
+import br.com.nomadlog.Location.EllipsoidSystem.Wgs84;
 
 /**
  * Created by danil on 26/10/2016.
