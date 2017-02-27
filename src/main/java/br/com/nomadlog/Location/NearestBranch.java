@@ -16,17 +16,20 @@ package br.com.nomadlog.Location;
 import br.com.nomadlog.Location.Distance.DistanceInterface;
 import br.com.nomadlog.Location.Distance.Vicenty;
 import br.com.nomadlog.Utils.Utils;
-import br.brastan.model.GeographicMarks_model;
-import br.brastan.model.dao.GeographicMarksDAO;
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
+//import br.brastan.model.GeographicMarks_model;
+//import br.brastan.model.dao.GeographicMarksDAO;
+//import org.apache.logging.log4j.LogManager;
+//import org.apache.logging.log4j.Logger;
 
 import java.util.*;
 
+/**
+ * make this class works independetly like a module
+ */
 public class NearestBranch {
 
-    static final Logger logger = LogManager.getLogger(NearestBranch.class.getName());
-    GeographicMarksDAO geoDAO = new GeographicMarksDAO();
+    //static final Logger logger = LogManager.getLogger(NearestBranch.class.getName());
+    //GeographicMarksDAO geoDAO = new GeographicMarksDAO();
     Coordinate landMarkPoint;
     DistanceInterface distanceCalc = new Vicenty();
     float precision = 15;
@@ -38,8 +41,8 @@ public class NearestBranch {
 
     private void setDefaultPrecision() {
         float configuredPrecision = 15;
-        if (br.com.nomadlog.Utils.getProperty("brastan.nomadtan.location.gps_precision") != null) {
-            configuredPrecision = Float.parseFloat(br.com.nomadlog.Utils.getProperty("brastan.nomadtan.location.gps_precision"));
+        if (Utils.GPS_PRECISION != null) {
+            configuredPrecision = Utils.GPS_PRECISION;
         }
 
         precision = configuredPrecision;
@@ -69,30 +72,27 @@ public class NearestBranch {
         return nearest.values();
     }
 
+    /*
+    TODO: work on this
     public List<Long> getNearBranchs() {
         return new ArrayList<>(getBranchs().keySet());
     }
 
     public HashMap<Long, Polyline> getBranchs() {
-        List<GeographicMarks_model> marks = getMarksData();
+        //List<GeographicMarks_model> marks = getMarksData();
         return createBranchMarkers(marks);
     }
 
-    /**
-     * Return recordset withs closests kilometric marks
-     *
-     * @return
-     */
     public List<GeographicMarks_model> getMarksData() {
         return geoDAO.getGeoMarksByLocation(landMarkPoint);
-    }
+    }*/
 
     /**
      * Group kilometric markers by branch
+     * todo: work on this
      *
-     * @param marks
      */
-    private HashMap<Long, Polyline> createBranchMarkers(List<GeographicMarks_model> marks) {
+    /*private HashMap<Long, Polyline> createBranchMarkers(List<GeographicMarks_model> marks) {
         ListIterator<GeographicMarks_model> markInterator = marks.listIterator();
         HashMap<Long, Polyline> branchs = new HashMap<>();
 
@@ -110,7 +110,7 @@ public class NearestBranch {
         }
 
         return branchs;
-    }
+    }*/
 
     private void foundClosestSegments(Long id, Polyline branch) {
         NearestPoint nearestPoint = foundNearestPoint(id, branch);
@@ -123,7 +123,8 @@ public class NearestBranch {
             nearest.put(id, nearestPoint);
         }
         if (nearest.containsKey(id) && nearestPoint != null) {
-            nearest.replace(id, nearestPoint);
+            //TODO: this require api level 24 in android
+            //nearest.replace(id, nearestPoint);
         }
     }
 
