@@ -18,8 +18,6 @@ import br.com.nomadlog.Location.Distance.Vicenty;
 import br.com.nomadlog.Utils.Utils;
 //import br.brastan.model.GeographicMarks_model;
 //import br.brastan.model.dao.GeographicMarksDAO;
-//import org.apache.logging.log4j.LogManager;
-//import org.apache.logging.log4j.Logger;
 
 import java.util.*;
 
@@ -28,7 +26,6 @@ import java.util.*;
  */
 public class NearestBranch {
 
-    //static final Logger logger = LogManager.getLogger(NearestBranch.class.getName());
     //GeographicMarksDAO geoDAO = new GeographicMarksDAO();
     Coordinate landMarkPoint;
     DistanceInterface distanceCalc = new Vicenty();
