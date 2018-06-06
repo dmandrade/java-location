@@ -27,16 +27,16 @@ import java.util.*;
 public class NearestBranch {
 
     //GeographicMarksDAO geoDAO = new GeographicMarksDAO();
-    Coordinate landMarkPoint;
-    DistanceInterface distanceCalc = new Vicenty();
-    float precision = 15;
-    HashMap<Long, NearestPoint> nearest = new HashMap<>();
+    protected Coordinate landMarkPoint;
+    protected DistanceInterface distanceCalc = new Vicenty();
+    protected float precision = 15;
+    protected HashMap<Long, NearestPoint> nearest = new HashMap<>();
 
     public NearestBranch() {
         setDefaultPrecision();
     }
 
-    private void setDefaultPrecision() {
+    protected void setDefaultPrecision() {
         float configuredPrecision = 15;
         if (Utils.GPS_PRECISION != null) {
             configuredPrecision = Utils.GPS_PRECISION;
